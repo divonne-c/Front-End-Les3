@@ -1,0 +1,364 @@
+/*Table of Contents*/
+/* ------------------------------- 1. Global Styles -------------------------------- */
+:root {
+    --primary-color: #5722cd;
+    --secondary-color: #4845e4;
+    --third-color: #ed4385;
+
+    --bg-primary-color: white;
+    --bg-secondary-color: #f3f6f9;
+    --service-text-color: #7a7a7a;
+    --box-shadow-color: rgba(42, 42, 44, 0.356);
+
+    --dark-color: #0c0c0c;
+    --light-color: #f2f0ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    background-color: var(--bg-primary-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Merriweather", serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a::after {
+    transition: 0.5s;
+}
+
+.container {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    color: var(--light-color);
+    background-color: var(--third-color);
+    box-shadow: 0 12px 8px -5px var(--box-shadow-color);
+    text-transform: uppercase;
+    font-size: 0.7em;
+    padding: 1.6em 3em;
+    transition: 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--third-color);
+    background-color: var(--light-color);
+    transition: 0.5s;
+}
+
+.line {
+    border-bottom: 40px solid var(--bg-primary-color);
+    border-right: 100vw solid transparent;
+}
+
+.line-reverse {
+    border-top: 40px solid var(--bg-primary-color);
+    border-left: 100vw solid transparent;
+}
+
+.primary-color-text {
+    color: var(--primary-color);
+}
+
+.bg-text::before {
+    position: absolute;
+    left: calc(50% - 31vw);
+    font-size: 31vw;
+    font-weight: bold;
+    letter-spacing: -1vw;
+    z-index: -1;
+}
+
+.linear-bg {
+    background: linear-gradient(110deg, var(--secondary-color) 0%, var(--primary-color) 90%);
+}
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* ----------------------- 4.1 Header --------------------------- */
+
+header {
+    color: var(--light-color);
+    position: relative;
+    z-index: 0;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    background-image: url(./assets/noise-texture.png);
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5em 5em;
+}
+
+nav a {
+    color: var(--light-color);
+    padding: 0 1.5em;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+nav a:hover {
+    color: var(--third-color);
+}
+
+#banner {
+    position: relative;
+    padding: 4em 0 8em 0;
+}
+
+#banner::after {
+    content: url(./assets/squiggle_line_stripe.svg);
+    position: absolute;
+    left: calc(50% - (79px / 2));
+    bottom: -17%;
+}
+
+#banner p {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin: 1em 0 1.2em 0;
+}
+
+/* ----------------------- 4.2 Section: about --------------------------- */
+
+#about-container {
+    margin-top: 13vh;
+    position: relative;
+}
+
+#about-container::before {
+    content: "hello";
+    top: -18vh;
+    color: var(--light-color);
+    opacity: 0.6;
+}
+
+#about-container p {
+    margin: 6em auto 7em auto;
+}
+
+#about-container .line {
+    border-bottom-color: var(--bg-secondary-color);
+}
+
+#about-container a:hover {
+    color: var(--third-color);
+}
+
+/* ----------------------- 4.3 Section: work --------------------------- */
+#work-container {
+    position: relative;
+    padding-top: 18vh;
+    background-color: var(--bg-secondary-color);
+    z-index: 0;
+}
+
+#work-container::before {
+    content: "work";
+    color: var(--bg-primary-color);
+    top: -4%;
+}
+
+#work-container article {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em;
+}
+
+.article-text h2 {
+    position: relative;
+}
+
+.article-text h2::after {
+    content: url(./assets/squiggle_line.svg);
+    position: absolute;
+    left: -2.7%;
+    top: 100%;
+    transform: scale(0.7);
+}
+
+.article-reverse {
+    flex-direction: row-reverse;
+    margin: 2em auto;
+}
+
+.article-img {
+    height: 40vh;
+    box-shadow: 0 25px 20px -7px var(--box-shadow-color);
+    object-fit: cover;
+}
+
+.article-text {
+    flex-basis: 22%;
+}
+
+.article-text .sguiggle {
+    width: 15%;
+}
+
+.article-text p {
+    margin: 4em 0 2.5em 0;
+}
+
+.article-text a {
+    position: relative;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.article-text a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 1.5px;
+    margin-left: 10px;
+    background-color: var(--primary-color);
+}
+
+.article-text a:hover::after {
+    width: 40px;
+}
+
+#work-container .line {
+    padding-top: 8em;
+}
+
+/* ----------------------- 4.4 Section: services --------------------------- */
+#services-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: 80vw;
+    margin: auto;
+    padding: 15em 0 8em 0;
+}
+
+#services-container::before {
+    content: "services";
+    color: var(--light-color);
+    font-size: 20vw;
+    top: 0;
+    left: 2vw;
+    letter-spacing: 0;
+    opacity: 0.6;
+}
+
+#services-container article {
+    flex: calc((80vw / 3) - 2em);
+    justify-content: flex-start;
+    padding: 2.2em 1.5em;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-primary-color);
+    box-shadow: 0 15px 8px -5px rgba(153, 153, 153, 0.192);
+}
+
+#services-container img {
+    width: 25%;
+}
+
+#services-container h3 {
+    text-transform: capitalize;
+}
+
+#services-container p {
+    color: var(--service-text-color);
+    margin-top: 0.9em;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+/* ----------------------- 4.5 Section: contact --------------------------- */
+
+#contact-container {
+    text-align: center;
+    color: var(--light-color);
+    padding-bottom: 4em;
+}
+
+#contact-container h2 {
+    margin: 2em 0 0.5em 0;
+    font-size: 2.5em;
+}
+
+#contact-container p {
+    font-weight: lighter;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+}
+
+form label {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+}
+
+#submit-btn {
+    padding: 20px 60px;
+    margin-top: 3em;
+}
+
+/* ----------------------- 4.6 Footer --------------------------- */
+
+footer {
+    color: var(--light-color);
+    background: var(--dark-color);
+    text-align: center;
+    font-size: 0.7em;
+    padding: 2em;
+}
