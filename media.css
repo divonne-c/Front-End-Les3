@@ -1,0 +1,91 @@
+/* Phone / tablet  */
+@media only screen and (max-width: 1050px) {
+    /* ------------------------------- 3. Layout --------------------------------------- */
+    .container {
+        width: 90%;
+    }
+
+    .line {
+        border-bottom-width: 15px;
+    }
+
+    .line-reverse {
+        border-top-width: 15px;
+    }
+
+    /* ----------------------- 4.1 Header --------------------------- */
+    nav {
+        justify-content: space-around;
+        padding: 1.5em 0;
+    }
+    nav a {
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    #banner h1 {
+        font-size: 1.7em;
+    }
+
+    #banner::after {
+        bottom: -15%;
+    }
+
+    /* ----------------------- 4.2 Section: about --------------------------- */
+    #about-container::before {
+        top: -10vh;
+    }
+
+    #about-container h2 {
+        font-size: 1em;
+    }
+
+    #about-container p {
+        margin-top: 3em;
+    }
+
+    /* ----------------------- 4.3 Section: work --------------------------- */
+
+    #work-container::before {
+        top: 1.5%;
+    }
+
+    #work-container article {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .article-img {
+        width: 90vw;
+        height: 30vh;
+        margin: auto;
+    }
+
+    .article-text {
+        margin: 2em 1.2em 0 1.2em;
+    }
+
+    #work-container .line {
+        padding-top: 2em;
+    }
+
+    /* ----------------------- 4.4 Section: services --------------------------- */
+    #services-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 8em 0;
+    }
+
+    #services-container::before {
+        top: 2.5%;
+    }
+
+    /* ----------------------- 4.5 Section: contact --------------------------- */
+
+    #contact-container h2 {
+        margin: 3em 0 0.5em 0;
+        font-size: 2em;
+    }
+}
